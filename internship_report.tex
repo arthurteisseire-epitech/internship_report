@@ -2,16 +2,20 @@
 \usepackage[T1]{fontenc}
 \usepackage[frenchb]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
 
 
 \title{Rapport De stage}
 \author{Arthur Teisseire}
 \begin{document}
-\tableofcontents
+\renewcommand{\contentsname}{Sommaire}
 \renewcommand{\thesection}{\arabic{section}}
+\tableofcontents
 \chapter*{Introduction}
-Du 10 août 2018 au 21 décembre 2018, j'ai effectué un stage au sein de l'entreprise Kalicommunication, plus précisement pour leur site d'impression en ligne Rapid-Flyer. Au cours de ce stage j'ai pu découvrir le fonctionnement d'un commerce en ligne.\newline
+\addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{}
+Du 10 août 2018 au 21 décembre 2018, j'ai effectué un stage au sein de l'entreprise Kalicommunication, plus précisément pour leur site d'impression en ligne Rapid-Flyer. Au cours de ce stage j'ai pu découvrir le fonctionnement d'un commerce en ligne.\newline
 L'entreprise Kalicommunication se situe à Marquette-Lez-Lille. Elle est spécialisée dans le secteur de l'impression en ligne.\newline
 Accompagné par Christophe Lenoir, directeur des services informatiques, j'ai pu développer mes compétences informatique en entreprise. Ma mission était principalement de continuer le développement du site Rapid-Flyer.
 \part{L'entreprise}
