@@ -1,0 +1,8 @@
+\newcommand{\chap}[1] {
+	\chapter*{#1}
+	\addcontentsline{toc}{chapter}{#1} \markboth{#1}{}
+	\setcounter{section}{0}
+}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\contentsname}{Sommaire}
