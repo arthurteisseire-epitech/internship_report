@@ -1,0 +1,19 @@
+\newpage
+\begin{figure}[p]
+ \centering
+\begin{center}
+	\scalebox{1.7} {
+		\begin{tikzpicture}[auto, node distance=1.5cm]
+		    \node[entity] (rf) {Rapid-Flyer};
+		    \node[entity] (pao) [below = of rf] {PAO};
+		    \node[entity] (sst) [below = of pao] {Imprimeur};
+		    \node[entity] (expe) [below = of sst] {Expédition};
+
+			\draw[->, to path={-> (\tikztotarget)}]
+		    	(rf) edge (pao) (pao) edge (sst) (sst) edge (expe);
+		\end{tikzpicture}
+	}
+\vspace{1cm}
+\end{center}
+\end{figure}
+\newpage

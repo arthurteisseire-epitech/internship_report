@@ -1,0 +1,25 @@
+\begin{figure}[htb]
+\begin{center}
+	\scalebox{1.7} {
+		\begin{tikzpicture}[auto, node distance=1.5cm]
+		    \node[entity] (rf) {Rapid-Flyer};
+		    \node[entity] (etl) [below = of rf] {ETL};
+			\node[entity] (rprice) [right = of etl] {RPrice};
+		    \node[entity] (erp) [below = of etl] {ERP};
+		    \node[entity] (twist) [right = of erp] {Twist};
+		    \node[entity] (metrix) [left = of erp] {Metrix};
+		    \node[entity] (sst) [below = of erp] {Imprimeur};
+		    \node[entity] (expe) [below = of sst] {Expédition};
+	
+			\draw[->, to path={-> (\tikztotarget)}]
+		    	(rf) edge (etl) (etl) edge (erp) (erp) edge (sst) (sst) edge (expe)
+				(etl) edge (rprice) (rprice) edge (etl)
+				(erp) edge (twist) (twist) edge (erp)
+				(erp) edge (metrix) (metrix) edge (erp);
+		\end{tikzpicture}
+	}
+\vspace{1cm}
+{\caption*{Schéma de l'architecture informatique de Kalicommunication}}
+\end{center}
+\end{figure}
+\newpage
