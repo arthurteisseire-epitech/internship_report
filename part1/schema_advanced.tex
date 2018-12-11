@@ -1,25 +1,35 @@
-\begin{figure}[htb]
-\begin{center}
+\begin{figure}
+\newpage
+\centerfloat
 	\scalebox{1.7} {
-		\begin{tikzpicture}[auto, node distance=1.5cm]
+		\begin{tikzpicture}[auto, >=stealth, shorten >=1mm, shorten <=1mm, node distance=1.7cm]
 		    \node[entity] (rf) {Rapid-Flyer};
 		    \node[entity] (etl) [below = of rf] {ETL};
 			\node[entity] (rprice) [right = of etl] {RPrice};
-		    \node[entity] (erp) [below = of etl] {ERP};
-		    \node[entity] (twist) [right = of erp] {Twist};
-		    \node[entity] (metrix) [left = of erp] {Metrix};
-		    \node[entity] (sst) [below = of erp] {Imprimeur};
-		    \node[entity] (expe) [below = of sst] {Expédition};
+		    \node[entity] (pao) [below = of etl] {PAO};
+		    \node[entity, yshift=-1.4cm, xshift=0.5cm] (twist) [above right = of pao] {Twist};
+		    \node[entity, yshift=+1.4cm, xshift=0.5cm] (metrix) [below right = of pao] {Metrix};
+		    \node[entity] (sst) [left = of pao] {Imprimeur};
+		    \node[entity] (expe) [below = of pao] {Expédition};
 	
 			\draw[->, to path={-> (\tikztotarget)}]
-		    	(rf) edge (etl) (etl) edge (erp) (erp) edge (sst) (sst) edge (expe)
+		    	(rf) edge (etl) (etl) edge (pao) (pao) edge (expe)
 				(etl) edge (rprice) (rprice) edge (etl)
-				(erp) edge (twist) (twist) edge (erp)
-				(erp) edge (metrix) (metrix) edge (erp);
+				(pao) edge (twist) (twist) edge (pao)
+				(pao) edge (metrix) (metrix) edge (pao)
+				(sst) edge (pao) (pao) edge (sst);
+
+			\path
+				(rf) edge node {1} (etl)
+				(etl) edge node {2} (rprice)
+				(etl) edge node {3} (pao)
+				(pao) edge node {4} (twist)
+				(pao) edge node {5} (metrix)
+				(pao) edge node {6} (sst)
+				(pao) edge node {7} (expe);
 		\end{tikzpicture}
 	}
 \vspace{1cm}
 {\caption*{Schéma de l'architecture informatique de Kalicommunication}}
-\end{center}
 \end{figure}
 \newpage

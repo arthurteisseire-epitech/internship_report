@@ -1,19 +1,19 @@
 \newpage
-\begin{figure}[p]
- \centering
-\begin{center}
+\vspace*{2cm}
+\begin{figure}[ph]
 	\scalebox{1.7} {
-		\begin{tikzpicture}[auto, node distance=1.5cm]
+		\begin{tikzpicture}[auto, >=stealth, shorten >=1mm, shorten <=1mm, node distance=1.7cm]
 		    \node[entity] (rf) {Rapid-Flyer};
 		    \node[entity] (pao) [below = of rf] {PAO};
-		    \node[entity] (sst) [below = of pao] {Imprimeur};
-		    \node[entity] (expe) [below = of sst] {Expédition};
+		    \node[entity] (sst) [left = of pao] {Imprimeur};
+		    \node[entity] (expe) [below = of pao] {Expédition};
 
 			\draw[->, to path={-> (\tikztotarget)}]
-		    	(rf) edge (pao) (pao) edge (sst) (sst) edge (expe);
+		    	(rf) edge (pao) (pao) edge (expe)
+				(pao) edge (sst) (sst) edge (pao);
 		\end{tikzpicture}
 	}
 \vspace{1cm}
-\end{center}
+\caption*{Schéma représentant le flux des produits de Rapid-Flyer}
+\vspace{2cm}
 \end{figure}
-\newpage
