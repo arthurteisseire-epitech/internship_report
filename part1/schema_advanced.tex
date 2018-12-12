@@ -4,11 +4,10 @@
 	\scalebox{1.7} {
 		\begin{tikzpicture}[auto, >=stealth, shorten >=1mm, shorten <=1mm, node distance=1.7cm]
 		    \node[entity] (rf) {Rapid-Flyer};
-		    \node[entity] (etl) [below = of rf] {ETL};
+		    \node[entity] (etl) [below = of rf] {RETL};
 			\node[entity] (rprice) [right = of etl] {RPrice};
 		    \node[entity] (pao) [below = of etl] {PAO};
-		    \node[entity, yshift=-1.4cm, xshift=0.5cm] (twist) [above right = of pao] {Twist};
-		    \node[entity, yshift=+1.4cm, xshift=0.5cm] (metrix) [below right = of pao] {Metrix};
+		    \node[entity] (twist) [right = of pao] {Twist};
 		    \node[entity] (sst) [left = of pao] {Imprimeur};
 		    \node[entity] (expe) [below = of pao] {Expédition};
 	
@@ -16,7 +15,6 @@
 		    	(rf) edge (etl) (etl) edge (pao) (pao) edge (expe)
 				(etl) edge (rprice) (rprice) edge (etl)
 				(pao) edge (twist) (twist) edge (pao)
-				(pao) edge (metrix) (metrix) edge (pao)
 				(sst) edge (pao) (pao) edge (sst);
 
 			\path
@@ -24,9 +22,8 @@
 				(etl) edge node {2} (rprice)
 				(etl) edge node {3} (pao)
 				(pao) edge node {4} (twist)
-				(pao) edge node {5} (metrix)
-				(pao) edge node {6} (sst)
-				(pao) edge node {7} (expe);
+				(pao) edge node {5} (sst)
+				(pao) edge node {6} (expe);
 		\end{tikzpicture}
 	}
 \vspace{1cm}

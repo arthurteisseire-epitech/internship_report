@@ -12,7 +12,7 @@ Le service client, quant à lui, s'assure de la satisfaction du client en traita
 Enfin, le service informatique de Kalicommunication assure le bon fonctionnement du site Rapid-Flyer, du progiciel utilisé par la PAO, ainsi que de tous les outils nécessaires au bon cheminement du produit.
 
 \section{L'architecture}
-L'entièreté des revenus de Kalicommunication reposent sur son site "Rapid-Flyer". Il est donc important de comprendre l'architecture qui le compose.
+L'entièreté des revenus de Kalicommunication reposent sur son site "Rapid-Flyer". Cependant "Rapid-Flyer" ne représente qu'une brique du système informatique. C'est l'architecture de ce système qui assure le bon cheminement des produits. Il est donc important d'en expliquer le fonctionnement.
 
 \input{part1/schema_simplified}
 
@@ -20,3 +20,11 @@ Ce schéma a été fortement simplifié pour comprendre rapidement le cheminemen
 
 \input{part1/schema_advanced}
 
+Sur ce nouveau schéma a été rajouté les principales applications développés par le service informatique de Kalicommunication. Ces nouvelles applications nécessitent des explications:
+\begin{itemize}
+\item RETL est une application qui permet de faire le pont entre les autres applications. C'est à dire qu'elle récupère des informations d'une application pour les envoyer dans une autre. Les autres applications n'ont donc pas à gérer tout ce processus.
+\item L'application RPrice, quant à elle, tous les prix nécessaires aux différents services. Le prix du produit, le coût de l'imprimeur, du livreur etc. Elle occupe donc un rôle indispensable au sein du système.
+\item La PAO, pour communiquer avec les autres applications, utilise un progiciel de gestion intégré (PGI ou ERP en anglais). Ce logiciel permet à la PAO d'interagir avec les autres applications sans difficultés. Le PGI constitue donc le cœur du système informatique
+\item Twist est un des rares logiciels qui n'a pas été développé par Kalicommunication. Son rôle est d'automatiser la vérification des fichiers clients. Un gain de temps pour la PAO qui peut donc s'occuper du reste du flux.\newline
+\end{itemize}
+Nous connaissons ensuite la fin du processus. Il est bon de préciser que ce schéma représente une simplification de l'architecture informatique de Kalicommunication. Cependant une explication complète de cette architecture serait trop longue pour rentrer dans le cadre de ce rapport.
