@@ -8,7 +8,7 @@ En 201., Techniphoto, un groupe d'imprimeurs, a racheté Kalicommunication. Aujo
 Kalicommunication est divisée en quatre pôles principaux: la Publication Assisté par Ordinateur (PAO), le marketing, le service client et le service informatique.\newline
 La PAO est un service propre à l'imprimerie qui permet d'assurer le bon processus d'impression des documents. En effet, celui-ci détermine si le document fourni par le client est prêt ou non pour l'impression et procède aux retouches nécessaires. Une fois cette étape terminée, la PAO s'occupe du cheminement du produit allant de l'imprimeur jusqu'à la livraison. Ce service constitue donc un rôle indispensable pour des spécialistes de l'impression en ligne.\newline
 De son côté, le service marketing met en place des stratégies pour attirer le client et améliore la visibilité du site.
-Le service client, quant à lui, s'assure de la satisfaction du client en traitant leur demandes.\newline
+Le service client, quant à lui, s'assure de la satisfaction du client en traitant leurs demandes.\newline
 Enfin, le service informatique de Kalicommunication assure le bon fonctionnement du site Rapid-Flyer, du progiciel utilisé par la PAO, ainsi que de tous les outils nécessaires au bon cheminement du produit.
 
 \section{L'architecture}
@@ -20,7 +20,7 @@ Ce schéma a été fortement simplifié pour comprendre rapidement le cheminemen
 
 \input{part1/schema_advanced}
 
-Sur ce nouveau schéma a été rajouté les principales applications développés par le service informatique de Kalicommunication. Ces nouvelles applications nécessitent des explications:
+Sur ce nouveau schéma a été rajouté les principales applications développées par le service informatique de Kalicommunication. Ces nouvelles applications nécessitent des explications:
 \begin{itemize}
 \item RETL est une application qui permet de faire le pont entre les autres applications. Elle récupère des informations d'une application pour les envoyer dans une autre avec le bon format de données. Les autres applications n'ont donc pas à gérer ce processus.
 \item L'application RPrice, quant à elle, calcule tous les prix nécessaires aux différents services. Le prix du produit, le coût de l'imprimeur, du transporteur etc. Elle occupe donc un rôle indispensable au sein du système.
